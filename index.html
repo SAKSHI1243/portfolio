@@ -302,15 +302,17 @@ h2.section-title{
 .rs-bar{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));}
 .rs-network{position:absolute;right:18px;bottom:18px;width:120px;height:100px;opacity:0.8;}
 
-/* project 3 - cybersecurity phishing */
-.screen-cyber{background:#0a0c14;padding:0;position:relative;font-family:var(--font-mono);}
-.cyber-top{display:flex;justify-content:space-between;padding:18px 22px 0;font-size:0.65rem;color:var(--text-faint);}
-.cyber-shield{width:70px;height:70px;margin:20px auto 10px;position:relative;}
-.cyber-status{text-align:center;font-size:0.7rem;color:var(--cyan);letter-spacing:0.08em;margin-bottom:16px;}
-.cyber-rows{padding:0 22px 22px;display:flex;flex-direction:column;gap:8px;}
-.cyber-row{display:flex;justify-content:space-between;font-size:0.62rem;color:var(--text-dim);border-bottom:1px solid var(--border);padding-bottom:6px;}
-.cyber-row .safe{color:var(--cyan);}
-.cyber-row .risk{color:var(--amber);}
+/* project 3 - IEEE publication */
+.screen-paper{background:radial-gradient(circle at 25% 15%,rgba(255,178,107,0.16),transparent 55%),#0d0f1a;padding:0;position:relative;font-family:var(--font-mono);}
+.paper-top{display:flex;justify-content:space-between;padding:18px 22px 0;font-size:0.65rem;color:var(--text-faint);}
+.paper-badge{display:inline-flex;align-items:center;gap:6px;margin:18px 22px 0;font-size:0.68rem;padding:6px 12px;border-radius:100px;background:rgba(255,178,107,0.12);border:1px solid rgba(255,178,107,0.3);color:var(--amber);width:fit-content;}
+.paper-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);}
+.paper-title{margin:22px 22px 0;font-family:var(--font-body);font-size:0.85rem;font-weight:500;color:var(--text);line-height:1.5;}
+.paper-authors{margin:10px 22px 0;font-size:0.68rem;color:var(--text-dim);}
+.paper-meta{margin:20px 22px 22px;display:flex;flex-direction:column;gap:8px;}
+.paper-row{display:flex;justify-content:space-between;font-size:0.62rem;color:var(--text-dim);border-bottom:1px solid var(--border);padding-bottom:6px;}
+.paper-row .val{color:var(--cyan);}
+.paper-stamp{position:absolute;bottom:20px;right:20px;font-size:0.6rem;letter-spacing:0.1em;color:var(--amber);border:1px solid rgba(255,178,107,0.35);padding:6px 10px;border-radius:6px;transform:rotate(-4deg);}
 
 /* ===== ACHIEVEMENTS ===== */
 .ach-track{
@@ -500,7 +502,7 @@ footer{
     <div class="project-row reveal">
       <div>
         <div class="project-num">01 · AI / AUTOMATION</div>
-        <h3 class="project-title">CircularAI</h3>
+        <h3 class="project-title">SecondLifeCommerce</h3>
         <p class="project-desc">An AI-powered reverse logistics platform that uses Gemini's multimodal AI to automatically grade returned products from photos, removing manual inspection from the resale pipeline. The backend is built for reliability — structured Pydantic response validation and exponential retry mechanisms keep grading consistent even when the model output is noisy.</p>
         <div class="project-stack"><span>FastAPI</span><span>AsyncIO</span><span>Gemini API</span><span>Pydantic</span><span>Docker</span></div>
         <div class="project-links"><a href="https://second-life-commerce-lac.vercel.app/" target="_blank" rel="noopener">Live Demo →</a><a href="https://github.com/SAKSHI1243/second-life-commerce" target="_blank" rel="noopener">GitHub →</a></div>
@@ -542,24 +544,25 @@ footer{
 
     <div class="project-row reveal">
       <div>
-        <div class="project-num">03 · CYBERSECURITY</div>
-        <h3 class="project-title">PhishGuard</h3>
-        <p class="project-desc">A machine learning classification pipeline that detects phishing threats by analyzing URL structural features, SSL certificate data, and WHOIS records in real time. The model reaches 96.24% accuracy and runs as a live inference service, flagging malicious sites before a user ever clicks through.</p>
-        <div class="project-stack"><span>Scikit-learn</span><span>FastAPI</span><span>Streamlit</span><span>Python</span></div>
-        <div class="project-links"><a href="https://phishguard-dashboard-smjr.onrender.com" target="_blank" rel="noopener">Live Demo →</a><a href="https://github.com/SAKSHI1243/phishguard-system" target="_blank" rel="noopener">GitHub →</a></div>
+        <div class="project-num">03 · RESEARCH PUBLICATION</div>
+        <h3 class="project-title">Cross-Dataset Stress Prediction</h3>
+        <p class="project-desc">Co-authored "A Unified Cross-Dataset Machine Learning Framework for Stress Prediction" (A. Bashyal, S. Sah, et al.) as part of a 9-member research team. The paper was accepted and presented at IEEE IC-SIT 2026, proposing a framework that generalizes stress-prediction models across multiple heterogeneous datasets.</p>
+        <div class="project-stack"><span>Machine Learning</span><span>Cross-Dataset Generalization</span><span>Applied Research</span></div>
+        <div class="project-links"><a href="https://sakshi1243.github.io/portfolio/" target="_blank" rel="noopener">IEEE IC-SIT 2026 · Accepted & Presented →</a></div>
       </div>
       <div class="mockup browser-frame">
         <div class="browser-bar"><i></i><i></i><i></i></div>
-        <div class="browser-screen screen-cyber">
-          <div class="cyber-top"><span>SCAN_ID: [0x9F2A]</span><span>[LIVE]</span></div>
-          <svg class="cyber-shield" viewBox="0 0 70 70"><path d="M35 5 L62 15 V35 C62 52 50 62 35 65 C20 62 8 52 8 35 V15 Z" fill="none" stroke="#4fe8c9" stroke-width="2"/><path d="M24 34 L32 42 L47 25" fill="none" stroke="#4fe8c9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="cyber-status">◆ ACCURACY: 96.24%</div>
-          <div class="cyber-rows">
-            <div class="cyber-row"><span>ssl_cert_valid</span><span class="safe">TRUE</span></div>
-            <div class="cyber-row"><span>domain_age_days</span><span class="risk">12</span></div>
-            <div class="cyber-row"><span>whois_privacy</span><span class="risk">ENABLED</span></div>
-            <div class="cyber-row"><span>verdict</span><span class="risk">PHISHING</span></div>
+        <div class="browser-screen screen-paper">
+          <div class="paper-top"><span>PAPER_ID: [IC-SIT-2026]</span><span>[PUBLISHED]</span></div>
+          <div class="paper-badge"><span class="paper-dot"></span> IEEE IC-SIT 2026</div>
+          <div class="paper-title">"A Unified Cross-Dataset Machine Learning Framework for Stress Prediction"</div>
+          <div class="paper-authors">A. Bashyal, S. Sah, et al.</div>
+          <div class="paper-meta">
+            <div class="paper-row"><span>status</span><span class="val">ACCEPTED</span></div>
+            <div class="paper-row"><span>presented</span><span class="val">TRUE</span></div>
+            <div class="paper-row"><span>team_size</span><span class="val">9 CO-AUTHORS</span></div>
           </div>
+          <div class="paper-stamp">ACCEPTED</div>
         </div>
       </div>
     </div>
@@ -869,6 +872,10 @@ mag.addEventListener('mousemove',e=>{
   const x=e.clientX-r.left-r.width/2, y=e.clientY-r.top-r.height/2;
   mag.style.transform=`translate(${x*0.25}px,${y*0.35}px)`;
 });
+mag.addEventListener('mouseleave',()=>{mag.style.transform='translate(0,0)';});
+</script>
+</body>
+</html>
 mag.addEventListener('mouseleave',()=>{mag.style.transform='translate(0,0)';});
 </script>
 </body>
